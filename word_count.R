@@ -1,6 +1,6 @@
 
   # Read the text file
-  file_path <- 'C:/Users/Deepthi Patric/Desktop/brian/token_words/token.txt'
+  file_path <- './tokenized_single_file.txt'
 text <- tolower(readLines(file_path, warn = FALSE))
 
 # Define themes and corresponding words
@@ -28,7 +28,7 @@ count_occurrences <- function(text, theme_words) {
 theme_word_counts <- count_occurrences(text, themes)
 
 # Save the results in a tab-separated values (TSV) file
-output_file_path <- 'C:/Users/Deepthi Patric/Desktop/brian/token_words/file.tsv'
+output_file_path <- './final_output_with_wordcount_to_corresponding_themes.tsv'
 for (theme_name in names(theme_word_counts)) {
   theme_data <- theme_word_counts[[theme_name]]
   write.table(theme_data, file = output_file_path, append = TRUE, sep = "\t", col.names = !file.exists(output_file_path), row.names = FALSE)

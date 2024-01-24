@@ -5,13 +5,13 @@ library(magick)
 library(tesseract)
 
 # Set the path to the input PDF folder
-input_folder_path <- "C:/Users/Deepthi Patric/Desktop/brian/pdfs/"
+input_folder_path <- "./input_pdfs"
 
 # Set the path to the output image folder
-output_image_folder_path <- "C:/Users/Deepthi Patric/Desktop/brian/output_images/"
+output_image_folder_path <- "./output_images"
 
 # Set the path to the output text folder
-output_text_folder_path <- "C:/Users/Deepthi Patric/Desktop/brian/output_texts/"
+output_text_folder_path <- "./output_texts"
 
 # Create the output folders if they don't exist
 if (!dir.exists(output_image_folder_path)) {

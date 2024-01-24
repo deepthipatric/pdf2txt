@@ -1,8 +1,8 @@
-# Specify the input folder containing .txt files
-input_folder <- "C:/Users/Deepthi Patric/Desktop/brian/cleaned_st"
+# Specify the input folder containing .txt files. the .txt files are quick manually cleaned files
+input_folder <- "./folder_containing_cleanedfiles"
 
 # Create the output folder if it doesn't exist
-output_folder <- "C:/Users/Deepthi Patric/Desktop/brian/output_eliminated"
+output_folder <- "./output_eliminated_joiing_words"
 if (!dir.exists(output_folder)) dir.create(output_folder)
 
 # Define the words to eliminate
