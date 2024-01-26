@@ -5,10 +5,10 @@ if (!requireNamespace("tokenizers", quietly = TRUE)) {
 library(tokenizers)
 
 # Directory containing your text files
-input_directory <- './folder_containing_eliminated_joining_words'
+input_directory <- 'C:/Users/Deepthi Patric/Desktop/brian/output_eliminated'
 
 # Output file for tokenized words
-output_file_path <- './output_for_single_tokenized_file.txt'
+output_file_path <- 'C:/Users/Deepthi Patric/Desktop/brian/token_words/token.txt'
 
 # Function to tokenize words from a text file
 tokenize_file <- function(file_path) {
