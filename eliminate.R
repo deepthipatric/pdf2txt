@@ -55,7 +55,7 @@ for (file in txt_files) {
   writeLines(cleaned_text, output_file)
 }
 
-# Ccombine to single txt file
+# combine to single txt file
 combined_text <- paste(combined_cleaned_text, collapse = " ")
 # Tokenize words from the combined text using tidytext
 tokens <- tibble(text = combined_text) %>%
