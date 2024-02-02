@@ -1,9 +1,9 @@
 
-  # Read the text file
-  file_path <- 'C:/Users/Deepthi Patric/Desktop/brian/token_words/token.txt'
+  # read the text file
+  file_path <- './token_words/token.txt'
 text <- tolower(readLines(file_path, warn = FALSE))
 
-# Define themes and corresponding words
+# define themes and corresponding words
 
 themes <- list(
   'Human Interest' = c('sympathy', 'motivation', 'problems', 'concerns', 'achievements', 'curiosity', 'feelings', 'compassion', 'result', 'consequence', 'upshot', 'outcome', 'out-turn', 'sequel', 'reaction', 'repercussions', 'reverberations', 'ramifications', 'endresult', 'termination', 'culmination', 'denouement', 'corollary', 'concomitant', 'aftermath', 'footprint', 'product', 'by-product', 'sequelae', 'pay-off', 'issue', 'success'),
@@ -14,7 +14,7 @@ themes <- list(
 )
 
 
-# Function to count occurrences of words for each theme
+# count occurrences of words for each theme
 count_occurrences <- function(text, theme_words) {
   word_counts <- list()
   for (theme_name in names(theme_words)) {
@@ -26,11 +26,11 @@ count_occurrences <- function(text, theme_words) {
   return(word_counts)
 }
 
-# Count occurrences
+# count occurrences
 theme_word_counts <- count_occurrences(text, themes)
 
-# Save the results in a tab-separated values (TSV) file
-output_file_path <- 'C:/Users/Deepthi Patric/Desktop/brian/token_words/file.tsv'
+# Save the results in TSV format
+output_file_path <- './file.tsv'
 for (theme_name in names(theme_word_counts)) {
   theme_data <- theme_word_counts[[theme_name]]
   write.table(theme_data, file = output_file_path, append = TRUE, sep = "\t", col.names = !file.exists(output_file_path), row.names = FALSE)
