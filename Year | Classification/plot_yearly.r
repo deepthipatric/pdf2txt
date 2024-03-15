@@ -4,8 +4,8 @@ library(ggplot2)
 # Create data frame with values per year
 data <- data.frame(
   Attribute = c("Human Interest", "Responsibility", "Morality", "Economic", "Conflict"),
-  Sunday_Times = c(30, 176, 57, 209, 3),
-  Mail_and_Guardian = c(1, 10, 2, 5, 0)
+  Sunday_Times = c(95, 778, 248, 737, 39),
+  Mail_and_Guardian = c(100, 564, 84, 261, 6)
 )
 
 
@@ -15,8 +15,10 @@ data_long <- melt(data, id.vars = "Attribute")
 
 ggplot(data_long, aes(x = Attribute, y = value, fill = variable)) +
   geom_bar(stat = "identity", position = "dodge", width = 0.5) + # Adjust width of bars
+
 #adjust heading as needed
-  labs(title = "Comparison of Attributes - Sunday Times vs. Mail and Guardian",
+
+  labs(title = "Comparison of Attributes - Sunday Times vs. Mail and Guardian ",
        x = "Attribute",
        y = "Count") +
   scale_fill_manual(values = c("Sunday_Times" = "black", "Mail_and_Guardian" = "grey50"), # Adjust fill colors
