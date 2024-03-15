@@ -18,7 +18,7 @@ ggplot(data_long, aes(x = Attribute, y = value, fill = variable)) +
 
 #adjust heading as needed
 
-  labs(title = "Comparison of Attributes - Sunday Times vs. Mail and Guardian ",
+  labs(title = "Comparison of Attributes 2010- Sunday Times vs. Mail and Guardian ",
        x = "Attribute",
        y = "Count") +
   scale_fill_manual(values = c("Sunday_Times" = "black", "Mail_and_Guardian" = "grey50"), # Adjust fill colors
